@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontlane Medical Center | Kireka, Kampala</title>
+<meta name="description" content="Frontlane Medical Center in Kireka, Kinawataka Road. Quality healthcare, reproductive health services, laboratory testing, maternal care and 24/7 emergency support.">
+<style>
+:root{
+  --purple:#673ab7;--purple-dark:#43217a;--purple-soft:#f2edfb;
+  --blue:#1976d2;--blue-dark:#1258a5;--blue-soft:#eaf4ff;
+  --white:#fff;--ink:#172033;--muted:#657084;--line:#e6e9f0;
+  --bg:#f8faff;--shadow:0 18px 45px rgba(44,32,91,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--purple-dark);color:#fff;font-size:.88rem}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;padding:8px 0}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--purple-dark)}
+.logo-mark{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;display:grid;place-items:center;font-size:23px;box-shadow:0 8px 20px rgba(103,58,183,.25)}
+.logo small{display:block;color:var(--muted);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;list-style:none;gap:27px;font-weight:600;color:#465066}
+.nav-links a:hover{color:var(--purple)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:11px;padding:12px 18px;font-weight:750;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;box-shadow:0 10px 24px rgba(80,55,160,.22)}
+.btn-outline{border:1px solid var(--line);background:#fff;color:var(--purple-dark)}
+.menu-btn{display:none;background:none;border:0;font-size:26px;color:var(--purple-dark)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#f5f0ff 0%,#eef7ff 100%);padding:82px 0 76px}
+.hero:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:rgba(103,58,183,.10);right:-160px;top:-180px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #ddd8ef;color:var(--purple-dark);padding:7px 12px;border-radius:99px;font-weight:750;font-size:.82rem;margin-bottom:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22a06b}
+.hero h1{font-size:clamp(2.35rem,5vw,4.5rem);line-height:1.06;letter-spacing:-.04em;color:#20233b;margin-bottom:19px}
+.hero h1 span{color:var(--purple)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:650px;margin-bottom:28px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{display:flex;gap:20px;margin-top:25px;color:var(--muted);font-size:.9rem}
+.hero-card{background:#fff;border:1px solid rgba(103,58,183,.12);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
+.hero-photo{min-height:390px;border-radius:20px;background:linear-gradient(135deg,rgba(103,58,183,.92),rgba(25,118,210,.88)),url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85") center/cover;display:flex;align-items:flex-end;padding:22px}
+.hero-info{background:rgba(255,255,255,.95);border-radius:18px;padding:18px;width:100%}
+.hero-info strong{font-size:1.15rem;color:var(--purple-dark)}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}
+.quick div{background:#fff;border:1px solid var(--line);padding:15px;border-radius:14px;text-align:center}
+.quick b{display:block;color:var(--purple-dark)}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+.kicker{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+.section-head h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--purple-dark);line-height:1.15;margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.services{background:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px;box-shadow:0 8px 25px rgba(31,43,74,.04);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d8cced}
+.icon{width:52px;height:52px;border-radius:15px;background:var(--purple-soft);display:grid;place-items:center;font-size:25px;margin-bottom:17px}
+.card h3{color:var(--purple-dark);margin-bottom:7px}
+.card p{color:var(--muted);font-size:.94rem}
+.feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.feature-image{min-height:430px;border-radius:28px;background:url("https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:var(--shadow)}
+.checks{list-style:none;margin:22px 0 28px}
+.checks li{margin:12px 0;color:#4c5669}
+.checks li:before{content:"✓";display:inline-grid;place-items:center;width:24px;height:24px;margin-right:10px;border-radius:50%;background:var(--purple-soft);color:var(--purple);font-weight:900}
+.booking{background:linear-gradient(135deg,#f5f0ff,#eef7ff)}
+.form{max-width:760px;margin:auto;background:#fff;padding:32px;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:4px}
+.field.full{grid-column:1/-1}
+label{display:block;font-weight:700;color:var(--purple-dark);font-size:.88rem;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;outline:none;background:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(103,58,183,.09)}
+.form .btn{width:100%;margin-top:8px}
+.contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;text-align:center}
+.contact-card .icon{margin:0 auto 12px}
+.contact-card h3{color:var(--purple-dark);font-size:1rem}
+.contact-card p{color:var(--muted);font-size:.92rem}
+.contact-card a{color:var(--blue);font-weight:750}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.map iframe{width:100%;height:360px;border:0;display:block}
+.cta{padding:60px 0}
+.cta-box{background:linear-gradient(120deg,var(--purple-dark),var(--blue));color:#fff;border-radius:26px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta-box h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.15}
+.cta-box p{opacity:.88;margin-top:7px}
+footer{background:#21163a;color:#fff;padding:42px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer h3{margin-bottom:10px}
+footer p,footer li{color:#cfc9dc;font-size:.9rem}
+footer ul{list-style:none}
+footer li{margin:7px 0}
+.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;text-align:center;color:#aaa0b9;font-size:.82rem}
+.whatsapp{position:fixed;right:22px;bottom:22px;width:59px;height:59px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:28px;box-shadow:0 10px 28px rgba(37,211,102,.35);z-index:1100}
+@media(max-width:850px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;gap:15px}
+  .nav-links.open{display:flex}.nav-actions .btn{display:none}.menu-btn{display:block}
+  .hero-grid,.feature{grid-template-columns:1fr}.hero{padding:60px 0}.hero-photo{min-height:320px}
+  .grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}.quick{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  section{padding:62px 0}.grid{grid-template-columns:1fr}.form{padding:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+  .footer-grid{grid-template-columns:1fr}.topbar .container{justify-content:center;text-align:center}.topbar .right{display:none}
+  .hero-buttons .btn{width:100%}.hero-note{flex-direction:column;gap:5px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div>📍 Kireka, Kinawataka Road, Kampala</div>
+    <div class="right">☎ 0756 939 098 &nbsp; | &nbsp; Open 24/7</div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">✚</div>
+      <div>Frontlane Medical Center<small>Quality care. Every day.</small></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">Why Frontlane</a></li>
+      <li><a href="#booking">Appointments</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="tel:+256756939098">☎ Call Now</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Open 24 hours · 7 days a week</div>
+      <h1>Healthcare you can <span>trust.</span></h1>
+      <p>Welcome to Frontlane Medical Center. We provide accessible, compassionate healthcare in Kireka, Kampala, with professional services for individuals and families.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#booking">📅 Book an Appointment</a>
+        <a class="btn btn-outline" href="https://wa.me/256756939098" target="_blank">💬 WhatsApp Us</a>
+      </div>
+      <div class="hero-note">
+        <span>✓ Professional care</span><span>✓ Convenient location</span><span>✓ 24/7 availability</span>
+      </div>
+      <div class="quick">
+        <div><b>24/7</b>Emergency support</div>
+        <div><b>6+</b>Core services</div>
+        <div><b>Easy</b>Online booking</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-photo">
+        <div class="hero-info">
+          <strong>Frontlane Medical Center</strong>
+          <div>Quality healthcare in Kireka, Kinawataka Road.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Our services</div>
+      <h2>Care for your health at every stage</h2>
+      <p>From routine consultations to reproductive and maternal health, our team is here to support you.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="icon">🩺</div><h3>General Consultation</h3><p>Medical assessment, diagnosis, treatment guidance and follow-up care.</p></div>
+      <div class="card"><div class="icon">🤰</div><h3>Maternal Health</h3><p>Antenatal, postnatal and other maternal health services in a supportive environment.</p></div>
+      <div class="card"><div class="icon">❤️</div><h3>Reproductive & Abortion Care</h3><p>Confidential reproductive health services, family planning, pregnancy options counselling and safe abortion care, provided by qualified healthcare professionals.</p></div>
+      <div class="card"><div class="icon">🔬</div><h3>Laboratory Tests</h3><p>Diagnostic laboratory services to support accurate clinical decisions.</p></div>
+      <div class="card"><div class="icon">💊</div><h3>Pharmacy</h3><p>Convenient access to essential medicines and medication guidance.</p></div>
+      <div class="card"><div class="icon">🚑</div><h3>Emergency Care</h3><p>Prompt assistance for urgent medical needs, available around the clock.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container feature">
+    <div class="feature-image" aria-label="Medical care"></div>
+    <div>
+      <div class="kicker">Why choose us</div>
+      <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);color:var(--purple-dark);line-height:1.15;margin:8px 0 14px">A convenient clinic focused on your wellbeing.</h2>
+      <p style="color:var(--muted)">We aim to make quality healthcare easier to access for people around Kireka and the surrounding communities.</p>
+      <ul class="checks">
+        <li>Conveniently located along Kinawataka Road</li>
+        <li>Open 24 hours, every day</li>
+        <li>Confidential and respectful patient care</li>
+        <li>Simple appointment booking through WhatsApp</li>
+      </ul>
+      <a class="btn btn-primary" href="#contact">Find Our Clinic</a>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Appointments</div>
+      <h2>Book your visit</h2>
+      <p>Submit your details and your booking request will open in WhatsApp for confirmation.</p>
+    </div>
+    <form class="form" id="bookingForm">
+      <div class="form-grid">
+        <div class="field"><label for="name">Full Name</label><input id="name" required placeholder="e.g. Sarah Nakato"></div>
+        <div class="field"><label for="phone">Phone Number</label><input id="phone" type="tel" required placeholder="e.g. 0756939098"></div>
+        <div class="field"><label for="service">Service Needed</label>
+          <select id="service" required><option value="">Select a service</option><option>General Consultation</option><option>Maternal Health</option><option>Reproductive & Abortion Care</option><option>Laboratory Tests</option><option>Pharmacy</option><option>Emergency Care</option><option>Other</option></select>
+        </div>
+        <div class="field"><label for="date">Preferred Date & Time</label><input id="date" type="datetime-local" required></div>
+        <div class="field full"><label for="notes">Additional Notes</label><textarea id="notes" rows="4" placeholder="Optional details..."></textarea></div>
+      </div>
+      <button class="btn btn-primary" type="submit">💬 Send Booking via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Contact us</div>
+      <h2>Visit Frontlane Medical Center</h2>
+      <p>We're ready to receive you whenever you need care.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card"><div class="icon">📍</div><h3>Location</h3><p>Kireka, Kinawataka Road<br>Kampala, Uganda</p></div>
+      <div class="contact-card"><div class="icon">📞</div><h3>Phone & WhatsApp</h3><p><a href="tel:+256756939098">0756 939 098</a><br><a href="https://wa.me/256756939098">Chat on WhatsApp</a></p></div>
+      <div class="contact-card"><div class="icon">🕐</div><h3>Opening Hours</h3><p>Open 24 hours<br>Monday – Sunday</p></div>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=0.3401528,32.645778&z=17&output=embed" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div><h2>Need medical assistance?</h2><p>Call Frontlane Medical Center or send us a WhatsApp message.</p></div>
+      <div class="hero-buttons"><a class="btn btn-outline" href="tel:+256756939098">☎ 0756 939 098</a><a class="btn btn-outline" href="https://wa.me/256756939098" target="_blank">💬 WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>Frontlane Medical Center</h3><p>Quality healthcare in Kireka, Kinawataka Road, Kampala.</p></div>
+      <div><h3>Quick Links</h3><ul><li><a href="#services">Services</a></li><li><a href="#booking">Appointments</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Contact</h3><p>0756 939 098</p><p>Open 24/7</p><p>Kireka, Kampala</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Frontlane Medical Center. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/256756939098" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const name=document.getElementById("name").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const service=document.getElementById("service").value;
+  const date=document.getElementById("date").value;
+  const notes=document.getElementById("notes").value.trim();
+  const formatted=date?new Date(date).toLocaleString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"}):"Not specified";
+  const message=`*Frontlane Medical Center – Appointment Request*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Preferred Date:* ${formatted}${notes?`%0A*Notes:* ${notes}`:""}`;
+  window.open(`https://wa.me/256756939098?text=${encodeURIComponent(message)}`,"_blank");
+});
+</script>
+</body>
+</html>
